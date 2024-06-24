@@ -29,10 +29,15 @@ www.youtube.com##ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-ti
 www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
 youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)
-www.youtube.com##ytd-browse[page-subtype="home"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-item-section-renderer)
-www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-thumbnail-overlay-resume-playback-renderer:upward(ytd-compact-video-renderer)
+www.youtube.com##ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
+youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display:contents !important;)
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-thumbnail-overlay-resume-playback-renderer #progress[style="width: 100%;"]:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
+www.youtube.com##ytd-browse[page-subtype="channels"] ytd-thumbnail-overlay-resume-playback-renderer #progress[style="width: 100%;"]:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-thumbnail-overlay-resume-playback-renderer #progress[style="width: 100%;"]:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-resume-playback-renderer #progress[style="width: 100%;"]:upward(ytd-item-section-renderer)
+www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-thumbnail-overlay-resume-playback-renderer #progress[style="width: 100%;"]:upward(ytd-compact-video-renderer)
 www.youtube.com###related
 m.youtube.com##ytm-watch ytm-item-section-renderer[data-content-type="related"]
 www.youtube.com##ytd-browse[page-subtype="home"]
@@ -42,12 +47,15 @@ www.youtube.com##.ytp-endscreen-content
 www.youtube.com##ytd-browse[page-subtype="playlist"] [title-style="ITEM_SECTION_HEADER_TITLE_STYLE_PLAYLIST_RECOMMENDATIONS"]:upward(ytd-item-section-renderer)
 www.youtube.com##ytd-browse[page-subtype="playlist"] ytd-grid-playlist-renderer:upward(#dismissible)
 www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-section-renderer:not(:has(ytd-feed-nudge-renderer))
+www.youtube.com##ytd-rich-item-renderer[is-post].ytd-rich-shelf-renderer:upward(ytd-rich-section-renderer)
 www.youtube.com##tp-yt-app-drawer#guide .ytd-guide-section-renderer > #header:has(a[href="/feed/you"])
 www.youtube.com##a.ytd-guide-entry-renderer[href^="/feed/trending"]:upward(ytd-guide-section-renderer)
 www.youtube.com##h3 > #guide-section-title:has-text(YouTube):upward(ytd-guide-section-renderer)
+www.youtube.com##ytd-guide-renderer yt-formatted-string:has-text(Home):upward(ytd-guide-entry-renderer)
 www.youtube.com##ytd-search ytd-item-section-renderer ytd-shelf-renderer
 www.youtube.com##ytd-search ytd-item-section-renderer ytd-horizontal-card-list-renderer
 www.youtube.com###chat:remove()
 www.youtube.com##.yt-reaction-control-panel-overlay-view-model
 www.youtube.com##ytd-reel-video-renderer~ytd-reel-video-renderer:matches-path(/shorts/)
 www.youtube.com###comments #contents:remove()
+
